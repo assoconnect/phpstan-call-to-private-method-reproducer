@@ -1,0 +1,15 @@
+parameters:
+    level: 5
+    checkUninitializedProperties: true
+    paths:
+        - tests/
+    symfony:
+        container_xml_path: var/cache/test/App_KernelTestDebugContainer.xml
+    doctrine:
+        repositoryClass: App\Repository\AbstractRepository
+
+includes:
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+    - vendor/phpstan/phpstan-doctrine/rules.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
+    - vendor/phpstan/phpstan-symfony/rules.neon
